@@ -11,12 +11,8 @@ Stack.from = function(...args){
 	return stack
 }
 
-Stack.prototype.isEmpty = function(){
-	return (this.count==0 && Object.keys(this.storage).length==0)?true:false
-}
-
-Stack.prototype.size = function(){
-	return this.count
+Stack.prototype.clear = function(){
+	this.empty()
 }
 
 Stack.prototype.empty = function(){
@@ -26,8 +22,20 @@ Stack.prototype.empty = function(){
 	this.count = 0
 }
 
-Stack.prototype.clear = function(){
-	this.empty()
+Stack.prototype.isEmpty = function(){
+	return (this.count==0 && Object.keys(this.storage).length==0)?true:false
+}
+
+Stack.prototype.peek = function(){
+	if(this.count === 0) return null
+	return this.storage[this.count-1]
+}
+
+Stack.prototype.pop = function(){
+	if(this.count === 0) return null
+	const result = this.storage[--this.count]
+	delete this.storage[this.count]
+	return result
 }
 
 Stack.prototype.push = function(value){
@@ -39,16 +47,8 @@ Stack.prototype.pushMany = function(...args){
 	flatten(args).map(value=>this.push(value))
 }
 
-Stack.prototype.pop = function(){
-	if(this.count === 0) return null
-	const result = this.storage[--this.count]
-	delete this.storage[this.count]
-	return result
-}
-
-Stack.prototype.peek = function(){
-	if(this.count === 0) return null
-	return this.storage[this.count-1]
+Stack.prototype.size = function(){
+	return this.count
 }
 
 Stack.prototype.swap = function(){
