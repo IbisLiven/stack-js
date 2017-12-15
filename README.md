@@ -68,3 +68,8 @@ stack.swap()
 stack.pop() 	// 4
 stack.pop() 	// 5
 ```
+## Why use Objects?
+Simple stack operations should have a time complexity of O(1).
+Most methods on the Array Prototype have a time complexity of O(n).
+Arrays take up a block of space because they have to keep their order.
+Objects however, have direct look-up of properties and do not have to be kept ‘in-order’.
