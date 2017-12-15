@@ -1,4 +1,4 @@
-# Stack.js
+# Stack Obj
 An implementation of a stack using javascript objects
 
 ## methods
