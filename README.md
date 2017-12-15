@@ -38,9 +38,9 @@ swaps the last two items in the stack
 
 ## Properties
 these are not meant to be accessed during normal use
-## count
+### count
 the number of items in the stack
-## storage
+### storage
 all the items in the stack
 
 
@@ -57,14 +57,14 @@ stack.push(3)
 stack.push(4)
 stack.size()	// 3
 stack.peek()	// 4
-stack.pop()		// 4
+stack.pop() 	// 4
 stack.size()	// 2
-stack.pop()		// 3
+stack.pop() 	// 3
 stack.empty()
 stack.size()	// 0
 stack = Stack.from(1,2,[3,4],5)
 stack.size()	// 5
 stack.swap()
-stack.pop()		// 4
-stack.pop()		// 5
+stack.pop() 	// 4
+stack.pop() 	// 5
 ```
