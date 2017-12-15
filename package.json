@@ -1,0 +1,26 @@
+{
+  "name": "stack-js",
+  "version": "1.0.0",
+  "description": "an implementation of stack",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "stack",
+    "data",
+    "structure"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/IbisLiven/stack-js.git"
+  },
+  "author": "Ibis Liven",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
