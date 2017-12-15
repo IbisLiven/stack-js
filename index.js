@@ -12,7 +12,7 @@ Stack.from = function(...args){
 }
 
 Stack.prototype.isEmpty = function(){
-	return (this.count==0)?true:false
+	return (this.count==0 && Object.keys(this.storage).length==0)?true:false
 }
 
 Stack.prototype.size = function(){
@@ -20,8 +20,8 @@ Stack.prototype.size = function(){
 }
 
 Stack.prototype.empty = function(){
-	for(let i=0;i<this.count;i++){
-		delete this.storage[i]
+	for(let key in Object.keys(this.storage)){
+		delete this.storage[key]
 	}
 	this.count = 0
 }
